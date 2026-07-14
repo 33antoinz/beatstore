@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Beat Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>🔥 Beat Store</h1>
+
+
+<div id="beats"></div>
+
+
+
+<script>
+
+
+fetch("/api/beats")
+.then(r=>r.json())
+.then(beats=>{
+
+
+let box=document.getElementById("beats");
+
+
+beats.forEach(b=>{
+
+
+box.innerHTML+=`
+
+<div class="beat">
+
+<img src="${b.cover}">
+
+<h2>${b.title}</h2>
+
+
+<audio controls>
+<source src="${b.preview}">
+</audio>
+
+
+<a class="buy"
+href="https://whop.com/beat-seller/licence-basic-mp3/">
+Basic MP3
+</a>
+
+
+<a class="buy"
+href="https://whop.com/beat-seller/licence-wav/">
+PRO WAV
+</a>
+
+
+<a class="buy"
+href="https://whop.com/beat-seller/licence-unlimited/">
+EXCLUSIVE
+</a>
+
+
+</div>
+
+
+`;
+
+});
+
+
+});
+
+
+</script>
+
+
+</body>
+</html>
