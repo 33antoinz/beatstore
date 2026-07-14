@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Admin</title>
+
+</head>
+
+
+<body>
+
+
+<h1>Ajouter un beat</h1>
+
+
+<form 
+action="/admin/add"
+method="POST"
+enctype="multipart/form-data">
+
+
+<input name="title" placeholder="Nom du beat">
+
+
+<br>
+
+
+Cover :
+
+<input type="file" name="cover">
+
+
+<br>
+
+
+Preview MP3 :
+
+<input type="file" name="preview">
+
+
+<br>
+
+
+ZIP :
+
+<input type="file" name="zip">
+
+
+<br>
+
+
+<button>
+Ajouter
+</button>
+
+
+</form>
+
+
+</body>
+
+</html>
